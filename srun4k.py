@@ -111,7 +111,7 @@ def force_logout(url,username, pwd):
 	header = {
 		'user-agent':'pySrun4k'
 	}
-	r = requests.post(url + "/cgi-bin/cgi-bin/srun_portal",
+	r = requests.post(url + "/cgi-bin/srun_portal",
 	                  data=payload, headers=header, verify=False)
 	if ('logout_ok' in r.text):
 		ret = {
